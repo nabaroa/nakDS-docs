@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+    background: linear-gradient(to right, #FF512F 0%, #DD2476 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a{
+  color:white;
+  text-decoration: none;
+}
