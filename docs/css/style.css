@@ -1,12 +1,35 @@
 body {
-  margin: 0;
+    margin: 0;
     background: linear-gradient(to right, #FF512F 0%, #DD2476 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'lato', sans-serif;
 }
-a{
-  color:white;
-  text-decoration: none;
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url("../fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'lato-bold';
+    src: url("../fonts/Lato-Black.ttf");
+}
+
+@font-face {
+    font-family: 'lato-light';
+    src: url("../fonts/Lato-light.ttf");
+}
+
+.bottom {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
