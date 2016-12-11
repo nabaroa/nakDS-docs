@@ -1,0 +1,57 @@
+# ----
+# Site
+
+title: nakDS
+description: Design System
+url: https://example.com
+google_analytics_key:
+permalink: pretty
+
+collections:
+  nakDS:
+    title: nakDS
+    position: 1
+  components:
+    title: Components
+    position: 2
+  utilities:
+    title: Utilities
+    position: 3
+  designTokens:
+    title: Design tokens
+    position: 4
+  about:
+    title: About
+    position: 5
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - readme.md
+  - LICENCE
+  - dest
+  - docs
+  - nakDS-src/
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - TODO
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+
+types:
+  - component
+  - utility
+  - object
+  - theme
+  - scope
+  - state
+  - javascript

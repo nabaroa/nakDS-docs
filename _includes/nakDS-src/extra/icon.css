@@ -1,0 +1,67 @@
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'axa';
+  src:  url('../fonts/axa.eot?81knf2');
+  src:  url('../fonts/axa.eot?81knf2#iefix') format('embedded-opentype'),
+    url('../fonts/axa.ttf?81knf2') format('truetype'),
+    url('../fonts/axa.woff?81knf2') format('woff'),
+    url('../fonts/axa.svg?81knf2#axa') format('svg');
+}
+.nak-icon-basket,.nak-icon-account,.nak-icon-home{
+  font-size: 1.8em;
+}
+.nak-icon-sign-out{
+  display: flex;
+  font-size: 1.3em;
+}
+[class^="ii-icon-"], [class*=" ii-icon-"],
+.nak-has-select:before,
+.breadcrumbs a:before,
+.hksubmenu li a:before,
+.nak-navigation-list--vertical li span {
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'axa' !important;
+  line-height: 1;
+  speak: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.nak-icon-health:before {
+  content: "\e909";
+}
+.nak-icon-sign-out:before {
+  content: "\e908";
+}
+.nak-icon-fonendo:before {
+  content: "\e90a";
+}
+.nak-icon-account:before {
+  content: "\e905";
+}
+.nak-icon-basket:before {
+  content: "\e906";
+}
+.nak-icon-user:before {
+  content: "\e900";
+}
+.nak-icon-home:before {
+  content: "\e907";
+}
+.nak-icon-chevron-small-up:before {
+  content: "\e901";
+}
+.nak-icon-chevron-small-right:before {
+  content: "\e902";
+}
+.nak-icon-chevron-small-left:before {
+  content: "\e903";
+}
+.nak-icon-chevron-small-down:before {
+  content: "\e904";
+}

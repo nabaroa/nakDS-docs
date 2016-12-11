@@ -1,0 +1,33 @@
+
+{
+  "name": "erase-una-vez-el-design-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "cssnano": "^3.6.2",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^6.2.0",
+    "postcss-apply": "^0.4.0",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-custom-properties": "^5.0.1",
+    "postcss-import": "^8.1.0",
+    "postcss-media-variables": "^2.0.0",
+    "postcss-mixins": "^4.0.1",
+    "postcss-nested": "^1.0.0",
+    "gulp-cssnano": "^2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nabaroa/erase-una-vez-el-design-system"
+  },
+  "homepage": "",
+  "description": ""
+}

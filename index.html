@@ -1,0 +1,39 @@
+---
+title: nakDS
+---
+{% assign sorted_collections = site.collections | sort: "position" %}
+{% for collection in sorted_collections %}
+	{% assign sorted_docs = collection.docs | sort: "position" %}
+	{% for doc in sorted_docs %}
+		<section class="doc-content">
+			<section class="left-docs">
+				<h1>
+					<a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+						{{ doc.title }}
+						{% if doc.type %}
+							<span class="endpoint {{ doc.type }}"></span>
+						{% endif %}
+					</a>
+				</h1>
+				{% if doc.css_path %}
+					<dl class="css_path"><dt>CSS path:</dt> <dd>{{doc.css_path}}</dd></dl>
+
+				{% endif %} 
+				{% if doc.css_path %}
+					<p class="description">{{doc.description}}</p>
+				{% endif %}
+
+				{{ doc.content | replace: "<dl>", "<h6>Parameters</h6><dl>" }}
+			</section>
+
+			{% if doc.right_code %}
+				<section class="right-code">
+					{{ doc.right_code | markdownify }}
+					{% capture my-include %}{% include {{doc.css_path}}  %}{% endcapture %}
+					{{ my-include | markdownify }}
+
+				</section>
+			{% endif %}
+		</section>
+	{% endfor %}
+{% endfor %}
