@@ -9,7 +9,7 @@ permalink: pretty
 
 collections:
   nakDS:
-    title: nakDS
+    title: Intro
     position: 1
   components:
     title: Components
@@ -26,6 +26,7 @@ collections:
 gems:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - markdown
 
 exclude:
   - readme.md
