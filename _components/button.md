@@ -5,7 +5,7 @@ type: component
 css_path: nakDS-src/components/button.css
 description: A button component
 right_code: |
-  
+
 
 
 
