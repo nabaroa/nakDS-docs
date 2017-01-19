@@ -26,14 +26,15 @@ gulp.task('css', function() {
       discardComments: { removeAll: true },
       safe: true
     };
-    return gulp.src('./_includes/nakDS-src/*.css')
+    // return gulp.src('./_includes/nakDS-src/*.css')
+    return gulp.src('./_css/nakDS-core/*.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./dest'))
         .pipe(nano(configNano))
         .pipe(gulp.dest('./css'))
-        .pipe(notify({ message: 'Your CSS is ready ♡' }));
+        .pipe(notify({ message: 'Your CORE CSS is ready ♡' }));
 });
-gulp.task('theme', function() {
+gulp.task('custom', function() {
     var processors = [
       cssimport,
       autoprefixer,
@@ -48,20 +49,38 @@ gulp.task('theme', function() {
       discardComments: { removeAll: true },
       safe: true
     };
+    return gulp.src('./_css/nakDS-custom/*.css')
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('./dest'))
+        .pipe(nano(configNano))
+        .pipe(gulp.dest('./css/'))
+        .pipe(notify({ message: 'Your CUSTOM CSS is ready ♡ ' }));
+});
+gulp.task('concatenate', function() {
+    var processors = [
+      cssimport,
+
+    ];
+    var configNano = {
+      autoprefixer: { browsers: 'last 2 versions' },
+      discardComments: { removeAll: true },
+      safe: true
+    };
     return gulp.src('./_css/*.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./dest'))
         .pipe(nano(configNano))
         .pipe(gulp.dest('./css/'))
-        .pipe(notify({ message: 'Your theme CSS is ready ♡ ' }));
+        .pipe(notify({ message: 'Your CONCATE CSS is ready ♡ ' }));
 });
 // Watch
 gulp.task('watch', function() {
     // Watch .css files
-    gulp.watch('./_includes/nakDS-src/**/*.css', ['css']);
-    gulp.watch('./_css/**/*.css', ['theme']);
+    gulp.watch('./_css/nakDS-core/**/*.css', ['css']);
+    gulp.watch('./_css/nakDS-custom/**/*.css', ['custom']);
+    gulp.watch('./_css/style.css', ['concatenate']);
 
 });
 
 // Default
-gulp.task('default', ['css','theme', 'watch',]);
+gulp.task('default', ['css','custom','concatenate','watch']);

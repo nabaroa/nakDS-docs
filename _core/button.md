@@ -1,13 +1,13 @@
 ---
-title: button
+title: button custom
 position: 2
-css_path: ../_css/nakDS-core/components/button.css
 type: component
+css_path: 
 description: A button component
-right_code:
+right_code: |
 
 
-right_content:  dfadf
+
 
 ---
 
