@@ -11,6 +11,9 @@ collections:
   nakDS:
     title: Intro
     position: 1
+  core:
+    title: Core
+    position: 2
   components:
     title: Components
     position: 2
