@@ -7,7 +7,7 @@ title: nakDS
 	{% for doc in sorted_docs %}
 		<section class="doc-content">
 			<section class="left-docs">
-				<h1>
+				<h1 class="ii-page-title">
 					<a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
 						{{ doc.title }}
 						{% if doc.type %}
@@ -34,7 +34,7 @@ title: nakDS
 				<section class="right-code">
 
 					{{ doc.right_code | markdownify }}
-				
+
 
 				</section>
 			{% endif %}
