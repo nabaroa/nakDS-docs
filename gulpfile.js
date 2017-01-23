@@ -1,3 +1,9 @@
+// TODO
+// Automatizar lo máximo posible el código para no tener que repetir
+// 1 include el component.css entero
+// 2 el component compilado en CSS
+
+
 // PostCSS Demo for Codemotion2016
 var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
@@ -78,6 +84,7 @@ gulp.task('watch', function() {
     // Watch .css files
     gulp.watch('./_css/nakDS-core/**/*.css', ['css']);
     gulp.watch('./_css/nakDS-custom/**/*.css', ['custom']);
+    gulp.watch('./_css/extra/*.css', ['custom']);
     gulp.watch('./_css/style.css', ['concatenate']);
 
 });

@@ -1,5 +1,7 @@
 /*source*/
-
+/*TODO*/
+/*Remove useless code*/
+/*Improve background with a svg*/
 
 /*https://github.com/CloudCannon/aviator-jekyll-template/blob/master/_sass/_main.scss*/
 :root {
@@ -87,9 +89,9 @@ html {
 
 body {
     background: #fbfbfb;
-    font-weight: 400;
-    font-size: 1.8em;
-    font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
+    /*font-weight: 400;*/
+    /*font-size: 1.8em;*/
+    /*font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;*/
     line-height: 1.6;
 
     &.nav-open {
@@ -100,6 +102,7 @@ body {
         }
         header {
             bottom: 0;
+
         }
     }
 }
@@ -264,7 +267,7 @@ dl dd:after {
         font-size: .90em;
 
         &.active {
-            color: #2196F3;
+            color: var(--theme-color);
             text-decoration: none;
         }
     }
@@ -272,28 +275,31 @@ dl dd:after {
 
 .endpoint {
     position: relative;
-    padding: 0 2px;
+    padding: 1px 2px;
+    border-radius:2px;
     font-size: 10px;
 }
 
-h3 .endpoint {
+h1 .endpoint {
     padding: 4px 6px;
     font-size: 19px;
 }
 
-.endpoint.put {
-    color: #7E57C2;
+.endpoint.component {
+    background: #7E57C2;
+    color:white;
 
     &:after {
-        content: "PUT";
+        content: "COMPONENT";
     }
 }
 
-.endpoint.delete {
-    color: #FF7043;
+.endpoint.token {
+    background:  #FF7043;
+    color:white;
 
     &:after {
-        content: "DELETE";
+        content: "TOKEN";
     }
 }
 
@@ -574,6 +580,11 @@ header {
             background-color: rgba(0, 0, 0, 0.1);
         }
     }
+}
+.header__image{
+  margin:var(--medium) 0;
+  text-align: center;
+
 }
 
 #search-input {

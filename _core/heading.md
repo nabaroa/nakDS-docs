@@ -1,9 +1,9 @@
 ---
 title: heading
 position: 2
-type: core
-css_path: 
-description: A button component
+css_path: _css/nakDS-core/components/button.css
+type: component
+description: Heading
 right_code: |
 
 

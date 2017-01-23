@@ -1,36 +1,27 @@
 ---
-title: button custom
+title: button
 position: 2
+css_path: _css/nakDS-core/components/button.css
 type: component
-css_path: 
 description: A button component
-right_code: |
+right_code:
 
 
-
+right_content:  dfadf
 
 ---
 
-<button class="nak-button">Use me</button>
+<button class="ii-button">Use me</button>
 ~~~ html
-<button class="nak-button">Use me</button>
+<button class="ii-button">Use me</button>
 ~~~
 {: title="button" }
 
-<button class="nak-button--naked">Use me</button>
-~~~ html
-<button class="nak-button--naked">Use me</button>
-~~~
-{: title="button--naked" }
 
-<button class="nak-button--neutral">Use me</button>
+<button class="ii-button--neutral">Use me</button>
 ~~~ html
-<button class="nak-button--neutral">Use me</button>
+<button class="ii-button--neutral">Use me</button>
 ~~~
 {: title="button--neutral" }
 
-<button class="nak-button--neutral">Use me</button>
-~~~ html
-<button class="nak-button--naked">Use me</button>
-~~~
-{: title="button--naked" }
+x

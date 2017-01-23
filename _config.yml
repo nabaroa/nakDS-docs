@@ -14,8 +14,8 @@ collections:
   core:
     title: Core
     position: 2
-  components:
-    title: Components
+  custom:
+    title: Custom
     position: 2
   utilities:
     title: Utilities
@@ -58,4 +58,4 @@ types:
   - theme
   - scope
   - state
-  - javascript
+  - token
