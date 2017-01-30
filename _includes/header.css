@@ -1,0 +1,14 @@
+~~~ css
+.nak-header{
+    padding:2.5rem;
+}
+.nak-header,.nak-logo{
+    display:flex;
+    align-items:center;
+}
+.nak-logo__svg{
+    margin-right:.75rem;
+    max-width:100%;
+    width:250px
+}
+~~~

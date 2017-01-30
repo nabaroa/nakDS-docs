@@ -7,7 +7,7 @@ title: nakDS
 	{% for doc in sorted_docs %}
 		<section class="doc-content">
 			<section class="left-docs">
-				<h1 class="ii-page-title">
+				<h1 class="nak-page-title">
 					<a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
 						{{ doc.title }}
 						{% if doc.type %}
@@ -16,7 +16,7 @@ title: nakDS
 					</a>
 				</h1>
 				{% if doc.css_path %}
-					<dl class="css_path"><dt>CSS path:</dt> <dd>{{doc.css_path}}</dd></dl>
+					<!-- <dl class="css_path"><dt>CSS path:</dt> <dd>{{doc.css_path}}</dd></dl> -->
 
 				{% endif %}
 				{% if doc.description %}
@@ -25,17 +25,19 @@ title: nakDS
 
 				{{ doc.content | replace: "<dl>", "<h6>Parameters</h6><dl>" }}
 			</section>
+
 			{% if doc.right_content %}
 			<section class="right-code">
 				{{doc.right_content}}
 			</section>
 			{% endif %}
+
 			{% if doc.right_code %}
 				<section class="right-code">
-
-					{{ doc.right_code | markdownify }}
-
-
+					<h2 class="nak-heading-4">Core</h2>
+				{% capture my_include %}{% include {{ doc.css_path }}%}{% endcapture %}
+				{{ my_include | markdownify | hilightify}}
+				<h2 class="nak-heading-4">Custom</h2>
 				</section>
 			{% endif %}
 

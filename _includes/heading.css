@@ -1,0 +1,27 @@
+~~~ css
+.nak-text-title{
+    font-weight:700;
+    font-size:1.5em;
+}
+.nak-text-title,.nak-text-title a{
+    color:#5c91c0;
+}
+.nak-page-title{
+    font-weight:700;
+    font-size:3em;
+}
+.nak-page-title,.nak-page-title a{
+    color:#6f6f6f;
+}
+.nak-section-title{
+    color:#5c91c0;
+    font-weight:700;
+    font-size:2em;
+}
+.nak-section-title a{
+    color:#5c91c0;
+}
+.nak-heading-1{
+  font-size:3rem;
+}
+~~~

@@ -1,0 +1,18 @@
+~~~ css
+.nak-module--neutral{
+    padding:1.25rem;
+
+    border:1px solid #ebebeb;
+}
+.nak-module--neutral p{
+    margin-bottom:1rem;
+}
+.nak-is-symmetric{
+    flex:1;
+}
+.nak-module__title{
+    color:#d6d41b;
+    text-transform:inherit;
+    font-weight:700;
+}
+~~~

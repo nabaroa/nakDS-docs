@@ -1,0 +1,73 @@
+~~~ css
+.nak-form--search{
+    background:#ebebeb;
+}
+.nak-form--search .nak-form-element__row{
+    max-width:inherit;
+}
+@media (min-width:500px){
+    .nak-form-element--inline .nak-form-element__label{
+        width:40%;
+    }
+    .nak-form-element--inline .nak-input,.nak-form-element--inline .nak-select{
+        width:60%;
+    }
+}
+.nak-form-element__row{
+    display:flex;
+    align-items:center;
+    min-height:40px;
+    max-width:600px;
+}
+@media (max-width:500px){
+    .nak-form-element__row{
+        flex-direction:column;
+    }
+}
+.nak-form-element__row--extended{
+    align-items:center;
+    justify-content:space-between;
+}
+.nak-form-element__row--left{
+    justify-content:flex-start;
+}
+.nak-form-element--center{
+    justify-content:center;
+    text-align:center;
+}
+.nak-form-element__row--top{
+    align-items:flex-start;
+}
+.nak-form--compound{
+    padding:1.25rem;
+}
+@media (min-width:800px){
+    .nak-form--compound,.nak-form--compound .nak-form-element+.nak-form-element,.nak-form--compound .nak-form-element--inline+.nak-form-element--inline{
+        padding-left:1.25rem;
+    }
+}
+.nak-form-element--inline .nak-form-element__label{
+    padding:0 10px;
+}
+@media (max-width:500px){
+    .nak-form-element--inline .nak-form-element__label{
+        padding:0;
+    }
+}
+.nak-is-stacable--medium .nak-form-element__label{
+    align-self:flex-start;
+    width:60%;
+}
+.nak-form-element__label.nak-has-bgcolor{
+    background:#d6d6d6;
+}
+@media (max-width:500px){
+    .nak-form-element__label.nak-has-bgcolor{
+        background:none;
+    }
+}
+.nak-input--naked{
+    border:0;
+    background:none;
+}
+~~~

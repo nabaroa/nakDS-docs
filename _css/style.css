@@ -4,10 +4,10 @@
 /*===============core===============*/
 
 @import "nakDS-core/style-core";
+@import "ds.css"; 
 
 
 
 /*===============custom===============*/
 
 @import "nakDS-custom/style-custom";
-  

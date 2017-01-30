@@ -1,7 +1,7 @@
 ---
 title: heading
 position: 2
-css_path: _css/nakDS-core/components/button.css
+css_path: heading.css
 type: component
 description: Heading
 right_code: |
@@ -11,26 +11,30 @@ right_code: |
 
 ---
 
-<button class="nak-button">Use me</button>
+<h1 class="nak-heading-1">Heading</h1>
 ~~~ html
-<button class="nak-button">Use me</button>
+<h1 class="nak-heading-1">Heading</h1>
 ~~~
-{: title="button" }
+{: title="Heading 1" }
+~~~ html
+<h1 class="nak-heading-1">Heading</h1>
+~~~
+{: title="Heading 1" }
 
-<button class="nak-button--naked">Use me</button>
+<h2 class="nak-heading-2">Heading</h2>
 ~~~ html
-<button class="nak-button--naked">Use me</button>
+<h2 class="nak-heading-2">Heading</h2>
 ~~~
-{: title="button--naked" }
+{: title="Heading 2" }
 
-<button class="nak-button--neutral">Use me</button>
+<h3 class="nak-heading-3">Heading</h3>
 ~~~ html
-<button class="nak-button--neutral">Use me</button>
+<h3 class="nak-heading-3">Heading</h3>
 ~~~
-{: title="button--neutral" }
+{: title="Heading 3" }
 
-<button class="nak-button--neutral">Use me</button>
+<h4 class="nak-heading-4">Heading</h4>
 ~~~ html
-<button class="nak-button--naked">Use me</button>
+<h4 class="nak-heading-4">Heading</h4>
 ~~~
-{: title="button--naked" }
+{: title="Heading 4" }
