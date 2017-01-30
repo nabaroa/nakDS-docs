@@ -7,7 +7,7 @@
     justify-content:center;
     min-width:100px;
     height:2.5rem;
-    border:2px solid #d6d6d6;
+    border:1px solid #d6d41b;
     border-radius:.5rem;
     background:#d6d41b;
     color:#6f6f6f;
@@ -36,7 +36,7 @@
     justify-content:center;
     min-width:100px;
     height:2.5rem;
-    border:2px solid #d6d6d6;
+    border:1px solid #d6d41b;
     border-radius:.5rem;
     background:#d6d41b;
     text-decoration:none !important;
