@@ -2,7 +2,7 @@
 title: Units
 position: 2
 description: How to use the units
-
+type: global
 right_content:
 
 ---

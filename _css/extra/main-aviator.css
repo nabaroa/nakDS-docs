@@ -1,9 +1,17 @@
 /*source*/
+
+
 /*TODO*/
+
+
 /*Remove useless code*/
+
+
 /*Improve background with a svg*/
 
+
 /*https://github.com/CloudCannon/aviator-jekyll-template/blob/master/_sass/_main.scss*/
+
 :root {
     --brand-colour: #35d69b;
     --nav-header-height: 60px;
@@ -18,8 +26,6 @@
 @custom-media --mobile-break (max-width: 700px);
 @custom-media --mobile-break-min (min-width: 700px);
 @custom-media --desktop-break (max-width: 1170px);
-
-
 @define-mixin flex-direction $values {
     -webkit-flex-direction: $values;
     flex-direction: $values;
@@ -102,7 +108,6 @@ body {
         }
         header {
             bottom: 0;
-
         }
     }
 }
@@ -123,6 +128,7 @@ th, td {
 th {
     background: #f7f7f7;
 }
+
 
 /*h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
@@ -165,9 +171,13 @@ h5 {
     font-size: 1.8rem;
     line-height: 1.5;
 }*/
+
 h1 {
-    a{
-        color:var(--text-color);
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--text-color);
     }
 }
 
@@ -176,16 +186,26 @@ p {
     margin-bottom: var(--large);
 }
 
+
 /*h3 a {
     color: #474a54;
     text-decoration: none;
-}*//*h3 a {
+}*/
+
+
+/*h3 a {
     color: #474a54;
     text-decoration: none;
-}*//*h3 a {
+}*/
+
+
+/*h3 a {
     color: #474a54;
     text-decoration: none;
-}*//*h3 a {
+}*/
+
+
+/*h3 a {
     color: #474a54;
     text-decoration: none;
 }*/
@@ -207,13 +227,13 @@ a:hover {
 
 pre {
     margin: 22px 0;
-    white-space: pre-wrap;    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-wrap: break-word;
     font-size: 1em;
 
-    .highlight *
-{
-  font-family: var(--code-font) !important;
-  }
+    .highlight * {
+        font-family: var(--code-font) !important;
+    }
 }
 
 dl {
@@ -275,7 +295,9 @@ dl dd:after {
         padding: 0;
     }
     a {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         overflow: hidden;
         padding: 2px 0;
         width: 100%;
@@ -285,56 +307,75 @@ dl dd:after {
         font-size: .90em;
 
         &.active {
-            color: var(--theme-color);
+            color: var(--color-black);
             text-decoration: none;
+            font-weight: bold;
         }
     }
 }
 
 .endpoint {
     position: relative;
-    padding: 1px 2px;
-    border-radius:2px;
+    display: flex;
+    align-items: center;
+    padding: 1px 3px;
+    border-radius: 2px;
     font-size: 10px;
 }
 
 h1 .endpoint {
     padding: 4px 6px;
-    font-size: 19px;
 }
 
 .endpoint.component {
-    background: #7E57C2;
-    color:white;
+    background:  var(--color-neutral);
+    color: white;
 
+    .active &{
+      background:#7E57C2 ;
+    }
     &:after {
-        content: "COMPONENT";
+        content: "Component";
+        text-transform: uppercase;
     }
 }
 
 .endpoint.token {
-    background:  #FF7043;
-    color:white;
+    background:  var(--color-neutral);
+    color: white;
 
+    .active &{
+      background:#FF7043 ;
+    }
     &:after {
-        content: "TOKEN";
+        content: "Token";
+        text-transform: uppercase;
     }
 }
 
 .endpoint.utility {
-    background: #66BB6A;
-    color:white;
+    background: var(--color-neutral);
+    color: white;
 
+    .active &{
+      background:#66BB6A ;
+    }
     &:after {
         content: "Utility";
+        text-transform: uppercase;
     }
 }
 
-.endpoint.post {
-    color: #42A5F5;
+.endpoint.global {
+    background:var(--color-neutral);
+    color:white;
 
+    .active &{
+      background:#42A5F5 ;
+    }
     &:after {
-        content: "POST";
+        content: "global";
+        text-transform: uppercase;
     }
 }
 
@@ -388,7 +429,7 @@ hr {
     padding: 30px 0;
     border: 0;
     border-bottom: 1px solid transparent;
-background:  url(../images/bg.svg) 0 0 repeat-y;
+    background: url(../images/bg.svg) 0 0 repeat-y;
 }
 
 .doc-content:after {
@@ -428,8 +469,8 @@ background:  url(../images/bg.svg) 0 0 repeat-y;
     padding: 0 50px;
     width: 40%;
 
-    img{
-      text-align: center;
+    img {
+        text-align: center;
     }
     code {
         color: #fff;
@@ -439,11 +480,11 @@ background:  url(../images/bg.svg) 0 0 repeat-y;
         border-radius: 5px;
         background: var(--color-cod-gray);
 
-        @media (--page-viewport){
-        column-count: 2;
+        @media (--page-viewport) {
+            column-count: 2;
         }
-        @media (--min-x-large-viewport){
-        column-count: 2;
+        @media (--min-x-large-viewport) {
+            column-count: 2;
         }
     }
     .code-viewer .languages li a:hover {
@@ -561,9 +602,6 @@ header {
         font-size: 1.7rem;
         line-height: 0.8;
 
-        a{
-
-        }
         img {
             margin: 0 18px;
             height: 26px;
@@ -588,10 +626,10 @@ header {
         }
     }
 }
-.header__image{
-  margin:var(--medium) 0;
-  text-align: center;
 
+.header__image {
+    margin: var(--medium) 0;
+    text-align: center;
 }
 
 #search-input {

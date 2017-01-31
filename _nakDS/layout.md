@@ -2,7 +2,7 @@
 title: Layout
 position: 3
 description: Layout
-
+type: global
 right_content:
 
 ---

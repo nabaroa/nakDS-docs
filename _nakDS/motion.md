@@ -2,6 +2,7 @@
 title: Motion
 position: 5
 description: Motion
+type: global
 
 right_content:
 

@@ -24,6 +24,13 @@ title: nakDS
 				{% endif %}
 
 				{{ doc.content | replace: "<dl>", "<h6>Parameters</h6><dl>" }}
+					{% if doc.token_path %}
+						<section class="nak-grid--wrapped">
+
+						{% capture my_include %}{% include {{ doc.token_path }}%}{% endcapture %}
+						{{ my_include }}
+						</section>
+					{% endif %}
 			</section>
 
 			{% if doc.right_content %}
@@ -39,6 +46,10 @@ title: nakDS
 				</section>
 			{% endif %}
 
+
 		</section>
 	{% endfor %}
 {% endfor %}
+
+
+<div class="nak-grid"><div class="box">blue</div></div>

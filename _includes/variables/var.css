@@ -8,10 +8,10 @@
     --text-color--ko:var(--color-error);
     --text-color--light:#b0b0b0;
     --text-color--dark:var(--color-cod-gray);
-    --color-positive:var(--theme-fourth-color);
+    --color-positive:var(--color-theme-fourth);
     --color-error:var(--color-torch-red200);
     --background-color:var(--color-gallery);
-    --background-color-button:var(--theme-color);
+    --background-color-button:var(--color-theme);
     --background-color-button--theme:var(--color-azure);
     --background-color-button--hover:var(--color-steel-blue);
     --background-color-label:var(--color-gallery);
@@ -26,12 +26,12 @@
     --border-color-button--naked:var(--color-gallery);
     --border-color-box:var(--color-gallery);
     --heading-text-color-link:var(--text-color);
-    --heading-text-color-link--hover:var(--theme-third-color);
+    --heading-text-color-link--hover:var(--color-theme-third);
     --heading-border-color-link:var(--text-color);
-    --heading-border-color-link--hover:var(--theme-third-color);
+    --heading-border-color-link--hover:var(--color-theme-third);
     --color-link--icon:var(--color-mine-shaft);
     --color-link--negativo:var(--color-wildsand);
-    --color-link--negativo-hover:var(--theme-third-color);
+    --color-link--negativo-hover:var(--color-theme-third);
     --color-table-border:var(--color-gallery);
     --color-table-bg:var(--color-wildsand);
     --color-tr-border:var(--color-gallery);

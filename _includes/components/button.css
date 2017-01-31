@@ -7,12 +7,11 @@
     justify-content:center;
     min-width:100px;
     height:2.5rem;
-    border:1px solid #d6d41b;
+    border:1px solid #765435;
     border-radius:.5rem;
-    background:#d6d41b;
+    background:#765435;
     color:#6f6f6f;
     text-decoration:none !important;
-    text-transform:inherit;
     font-size:1.25rem;
     font-family:Lato,sans-serif;
     cursor:pointer;
@@ -28,7 +27,7 @@
 }
 
 .nak-button:focus{
-    background:#d6d41b;
+    background:#765435;
     color:#fff;
 
 }
@@ -39,11 +38,10 @@
     justify-content:center;
     min-width:100px;
     height:2.5rem;
-    border:1px solid #d6d41b;
+    border:1px solid #765435;
     border-radius:.5rem;
-    background:#d6d41b;
+    background:#765435;
     text-decoration:none !important;
-    text-transform:inherit;
     font-size:1.25rem;
     font-family:Lato,sans-serif;
     cursor:pointer;
@@ -62,7 +60,7 @@
 }
 
 .nak-button--neutral:focus{
-    background:#d6d41b;
+    background:#765435;
     color:#fff;
 
 }

@@ -1,10 +1,11 @@
 ~~~ css
 a{
+    color:#d6d41b;
     text-decoration:underline;
     cursor:pointer;
 }
-a,a:hover{
-    color:#d6d41b;
+a:hover{
+    color:#765435;
 
 }
 .nak-link--naked,.nak-link--naked:hover,.nak-link--neutral{
@@ -43,7 +44,7 @@ a,a:hover{
 
 }
 .nak-menu-link--color{
-    color:#d6d41b;
+    color:#765435;
 }
 .nak-menu-link--color,.nak-menu-link--color:hover{
     text-decoration:none;
@@ -54,7 +55,7 @@ a,a:hover{
 
 }
 .nak-menu-link--color [class*=ii-icon]{
-    color:#d6d41b;
+    color:#765435;
 
 }
 .icon-position-center{

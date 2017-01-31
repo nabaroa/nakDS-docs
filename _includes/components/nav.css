@@ -21,16 +21,16 @@
 
 }
 .nak-navigation-list--vertical li a:hover{
-    color:#d6d41b;
+    color:#765435;
 
 }
 .nak-navigation-list--vertical li span:before{
-    color:#d6d41b;
+    color:#765435;
     content:"\e902";
 
 }
 .nak-navigation-list--vertical strong{
-    color:#d6d41b;
+    color:#765435;
 
 }
 ~~~

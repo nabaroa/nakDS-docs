@@ -16,7 +16,7 @@ collections:
     position: 2
   custom:
     title: Custom
-    position: 2
+    position: 5
   utilities:
     title: Utilities
     position: 3
@@ -25,7 +25,7 @@ collections:
     position: 4
   about:
     title: About
-    position: 5
+    position: 6
 gems:
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -55,6 +55,7 @@ types:
   - component
   - utility
   - object
+  - global
   - theme
   - scope
   - state

@@ -47,7 +47,7 @@ a.link-print{
     float:left;
 }
 .nak-text-color{
-    color:#d6d41b;
+    color:#765435;
 }
 .nak-text-color--secondary{
     color:#ff1821;
@@ -137,7 +137,7 @@ a.link-print{
     position:absolute;
     right:10px;
     bottom:15px;
-    color:#d6d41b;
+    color:#765435;
     content:"\e904";
 
 }
