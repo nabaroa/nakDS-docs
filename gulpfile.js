@@ -1,8 +1,4 @@
-// TODO
-// Automatizar lo máximo posible el código para no tener que repetir
-// 1 include el component.css entero
-// 2 el component compilado en CSS
-
+/*nakDS by @nabaroa*/
 
 var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
@@ -53,13 +49,12 @@ gulp.task('components', function() {
     ];
     var configNano = {
       autoprefixer: false,
-      // discardComments: { removeAll: true },
       core: false,
       styleCache:false
     };
     return gulp.src('./_css/nakDS-core/components/*.css')
         .pipe(postcss(processors))
-        .pipe(gulp.dest('./dest/includes/'))
+        .pipe(gulp.dest('./dest/includes/components/'))
         .pipe(nano(configNano))
         .pipe(insert.prepend('~~~ css' + '\n'))
         .pipe(insert.append('~~~'))
@@ -67,8 +62,35 @@ gulp.task('components', function() {
         //     var comment = '// local file: ' + file.path + '\n';
         //     return comment + text;
         // }))
-        .pipe(gulp.dest('./_includes/'))
+        .pipe(gulp.dest('./_includes/components/'))
         .pipe(notify({ message: 'Your COMPONENTS CSS is ready ♡ ' }));
+});
+gulp.task('utilities', function() {
+    var processors = [
+      cssimport,
+      customproperties,
+      apply,
+      mixins,
+      nested,
+      customMedia
+    ];
+    var configNano = {
+      autoprefixer: false,
+      core: false,
+      styleCache:false
+    };
+    return gulp.src('./_css/nakDS-core/utilities/*.css')
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('./dest/includes/utilities/'))
+        .pipe(nano(configNano))
+        .pipe(insert.prepend('~~~ css' + '\n'))
+        .pipe(insert.append('~~~'))
+        // .pipe(insert.transform(function(text, file) {
+        //     var comment = '// local file: ' + file.path + '\n';
+        //     return comment + text;
+        // }))
+        .pipe(gulp.dest('./_includes/utilities/'))
+        .pipe(notify({ message: 'Your UTILITIES CSS is ready ♡ ' }));
 });
 // gulp.task('inject:wrap', function(){
 //     gulp.src('_include/*.css')
@@ -76,6 +98,34 @@ gulp.task('components', function() {
 //         // .pipe(rename('*.css'))
 //         .pipe(gulp.dest('test'));
 // });
+gulp.task('root-code', function() {
+    var configNano = {
+      autoprefixer: false,
+      core: false,
+      styleCache:false
+    };
+    return gulp.src('./_css/nakDS-core/tokens/*.css')
+        .pipe(gulp.dest('./dest/includes/tokens/'))
+        .pipe(nano(configNano))
+        .pipe(insert.prepend('~~~ css' + '\n'))
+        .pipe(insert.append('~~~'))
+          .pipe(gulp.dest('./_includes/tokens/'))
+        .pipe(notify({ message: 'Your ROOT CODE CSS is ready ♡ ' }));
+});
+gulp.task('variables', function() {
+    var configNano = {
+      autoprefixer: false,
+      core: false,
+      styleCache:false
+    };
+    return gulp.src('./_css/nakDS-core/variables/*.css')
+        .pipe(gulp.dest('./dest/includes/variables/'))
+        .pipe(nano(configNano))
+        .pipe(insert.prepend('~~~ css' + '\n'))
+        .pipe(insert.append('~~~'))
+          .pipe(gulp.dest('./_includes/variables/'))
+        .pipe(notify({ message: 'Your VARIABLES CSS are ready ♡ ' }));
+});
 gulp.task('inject:afterEach', function(){
     gulp.src('_include/button.css')
         .pipe(inject.afterEach('/*!*/','nak'))
@@ -133,6 +183,7 @@ gulp.task('watch', function() {
     // Watch .css files
     gulp.watch('./_css/nakDS-core/**/*.css', ['css','inject:afterEach']);
     gulp.watch('./_css/nakDS-core/components/*.css', ['components','inject:afterEach']);
+    gulp.watch('./_css/nakDS-core/utils/tokens--color.css', ['root-code']);
     gulp.watch('./_css/nakDS-custom/**/*.css', ['custom']);
     gulp.watch('./_css/ds.css', ['ds']);
     gulp.watch('./_css/extra/*.css', ['ds']);
@@ -141,4 +192,4 @@ gulp.task('watch', function() {
 });
 
 // Default
-gulp.task('default', ['css','custom','components','inject:afterEach','ds','watch']);
+gulp.task('default', ['css','custom','components','utilities','inject:afterEach','root-code','variables','ds','watch']);

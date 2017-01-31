@@ -2,6 +2,7 @@
 .nak-wizard a{
     color:#b0b0b0;
     text-decoration:none
+
 }
 .nak-wizard-list{
     display:flex;
@@ -10,7 +11,9 @@
 @media (max-width:800px){
     .nak-wizard-list{
         margin-bottom:1.25rem
+
     }
+
 }
 .nak-wizard-marker{
     position:relative;
@@ -27,9 +30,11 @@
     position:absolute;
     color:#fff;
     font-size:1.2em;
+
 }
 .is-active .nak-wizard-marker,.nak-is-active .nak-wizard-marker{
     background:#d6d41b;
+
 }
 .nak-wizard-label{
     display:block;
@@ -40,12 +45,16 @@
     .nak-wizard-label{
         display:none;
         margin:0
+
     }
+
 }
 .has-wizard form{
     display:none;
+
 }
 .has-wizard form.is-active{
     display:block;
+
 }
 ~~~

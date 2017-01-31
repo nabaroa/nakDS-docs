@@ -22,5 +22,6 @@
 .nak-has-tooltip:hover .nak-tooltip{
     display:flex;
     transform:translate(0);
+
 }
 ~~~

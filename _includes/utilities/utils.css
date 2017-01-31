@@ -1,0 +1,171 @@
+~~~ css
+.clearboth{
+    clear:both;
+}
+.clearboth-line{
+    clear:both;
+    border-bottom:1px solid #f5f5f5;
+}
+.clearboth-10{
+    clear:both;
+    height:5px;
+}
+.hidden{
+    display:none !important;
+}
+.nak-block{
+    display:block;
+}
+a.link-print{
+    display:none;
+}
+.align-right{
+    text-align:right;
+}
+.small-text{
+    color:#6f6f6f;
+}
+.nak-text-size--small,.small-text{
+    font-size:.9em;
+}
+.nak-text-size--large{
+    font-size:1.2em;
+}
+.nak-text-size--huge{
+    font-size:3em;
+}
+.text{
+    font-size:16px;
+}
+.nak-display--inline{
+    display:inline;
+}
+.nak-float-right{
+    float:right;
+}
+.nak-float-left{
+    float:left;
+}
+.nak-text-color{
+    color:#d6d41b;
+}
+.nak-text-color--secondary{
+    color:#ff1821;
+}
+.nak-text-color--third{
+    color:#5c91c0;
+}
+.nak-text-color--neutral{
+    color:#d6d6d6;
+}
+.nak-text--strong{
+    color:#000;
+    font-weight:700;
+}
+.nak-is-hidden{
+    display:none !important;
+}
+@media (min-width:800px){
+    .nak-is-hidden--min-medium{
+        display:none !important;
+
+    }
+
+}
+@media (min-width:500px){
+    .nak-is-hidden--min-small{
+        display:none !important;
+
+    }
+
+}
+.nak-align--right{
+    display:flex;
+    text-align:right;
+}
+.nak-align--right,.nak-align--right.nak-form-element--inline,.nak-align--right.nak-form-element__row{
+    justify-content:flex-end;
+
+}
+.nak-align--center{
+    display:flex;
+    justify-content:center;
+    text-align:center;
+}
+@media (max-width:500px){
+    .nak-align--center{
+        align-items:center;
+        text-align:center;
+
+    }
+
+}
+.nak-align--center p{
+    text-align:center;
+
+}
+@media (max-width:500px){
+    .nak-is-stacable--small{
+        flex-direction:column;
+        align-items:flex-start;
+        height:inherit;
+
+    }
+    .nak-is-stacable--small.nak-grid{
+        flex-wrap:wrap;
+
+    }
+
+}
+@media (max-width:800px){
+    .nak-is-stacable--medium{
+        flex-direction:column;
+        align-items:flex-start;
+        height:inherit;
+
+    }
+
+}
+@media (max-width:800px){
+    .nak-is-stacable--medium.nak-grid,.nak-is-wrappable--medium{
+        flex-wrap:wrap;
+
+    }
+
+}
+.nak-has-select:before{
+    position:absolute;
+    right:10px;
+    bottom:15px;
+    color:#d6d41b;
+    content:"\e904";
+
+}
+.nak-has-select:hover:before{
+    color:#ff1821;
+
+}
+.nak-image-mask--gradient{
+    mask-image:linear-gradient(0,#000 40%,transparent);
+    mask-repeat:space;
+}
+.nak-has-bg-image--gradient{
+    background:linear-gradient(45deg,#ebebeb 44%,hsla(0,0%,92%,0)),url(http://localhost-axabienestar:8888/skin/frontend/rwd/default/images/specialty/odontologia.jpg);
+    background-position:100% 0;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.std:empty{
+    display:none;
+}
+.nak-bg-color--neutral{
+    background:#ebebeb;
+}
+.nak-width-input--inline{
+    width:60%;
+}
+.nak-obj-fit--contain{
+    width:100%;
+    object-fit:contain;
+}
+~~~

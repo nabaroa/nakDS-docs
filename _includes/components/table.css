@@ -7,12 +7,15 @@
 .nak-table--neutral th{
     color:#d6d41b;
     font-weight:700;
+
 }
 .nak-table--neutral td{
     padding:1rem;
     border:1px solid #ebebeb;
+
 }
 .nak-table--neutral td[colspan="3"]{
     background:#ebebeb;
+
 }
 ~~~

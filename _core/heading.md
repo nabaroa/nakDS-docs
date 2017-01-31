@@ -1,7 +1,7 @@
 ---
 title: heading
 position: 2
-css_path: heading.css
+css_path: components/heading.css
 type: component
 description: Heading
 right_code: |

@@ -4,10 +4,18 @@
 /*===============core===============*/
 
 @import "nakDS-core/style-core";
-@import "ds.css"; 
+@import "ds.css";
 
 
 
 /*===============custom===============*/
 
 @import "nakDS-custom/style-custom";
+
+/*TODO*/
+/*Responsive ds. Menú en mobile. Arreglar*/
+/*gráfico visual del estado del ds. y cuántos compenentes*/
+/*custom automation*/
+/*Añadir bemit media*/
+/*Fixed page title*/
+/*Crear sistema extender código*/

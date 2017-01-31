@@ -1,7 +1,7 @@
 ---
 title: button
 position: 1.3
-css_path: button.css
+css_path: components/button.css
 type: component
 description: Button
 

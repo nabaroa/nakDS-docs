@@ -22,12 +22,15 @@
 
     .nak-button{
         width:100%;
+
     }
+
 }
 
 .nak-button:focus{
     background:#d6d41b;
     color:#fff;
+
 }
 
 .nak-button--neutral{
@@ -53,12 +56,15 @@
 
     .nak-button--neutral{
         width:100%;
+
     }
+
 }
 
 .nak-button--neutral:focus{
     background:#d6d41b;
     color:#fff;
+
 }
 
 /*!*/

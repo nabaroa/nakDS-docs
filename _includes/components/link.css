@@ -5,6 +5,7 @@ a{
 }
 a,a:hover{
     color:#d6d41b;
+
 }
 .nak-link--naked,.nak-link--naked:hover,.nak-link--neutral{
     text-decoration:none;
@@ -14,15 +15,18 @@ a,a:hover{
 }
 .nak-link--neutral span{
     color:currentColor;
+
 }
 .nak-link--neutral:hover{
     text-decoration:none;
+
 }
 .nak-link--negative{
     color:#f5f5f5;
 }
 .nak-link--negative:hover{
     color:#5c91c0;
+
 }
 .nak-has-icon{
     display:flex;
@@ -32,21 +36,26 @@ a,a:hover{
 .nak-has-icon [class*=ii-icon]{
     margin-right:5px;
     color:#b0b0b0;
+
 }
 .nak-has-icon:hover [class*=ii-icon]{
     color:#6f6f6f;
+
 }
 .nak-menu-link--color{
     color:#d6d41b;
 }
 .nak-menu-link--color,.nak-menu-link--color:hover{
     text-decoration:none;
+
 }
 .nak-menu-link--color:hover [class*=ii-icon]{
     color:#5c91c0;
+
 }
 .nak-menu-link--color [class*=ii-icon]{
     color:#d6d41b;
+
 }
 .icon-position-center{
     display:flex;
@@ -55,5 +64,6 @@ a,a:hover{
 .icon-position-center span{
     margin-left:1rem;
     text-decoration:none;
+
 }
 ~~~
