@@ -9,11 +9,12 @@ var gulp = require('gulp'),
     mixins = require('postcss-mixins'),
     nested = require('postcss-nested'),
     customMedia = require("postcss-custom-media")
-nano = require('gulp-cssnano'),
+    nano = require('gulp-cssnano'),
     notify = require('gulp-notify'),
     rename = require('gulp-rename'),
-    inject = require('gulp-inject-string');
-insert = require('gulp-insert');
+    inject = require('gulp-inject-string'),
+    replace = require('gulp-string-replace'),
+    insert = require('gulp-insert');
 
 gulp.task('css', function() {
     var processors = [
@@ -93,7 +94,7 @@ gulp.task('utilities', function() {
             message: 'Your UTILITIES CSS is ready ♡ '
         }));
 });
-gulp.task('inject:beforeEach', function() {
+gulp.task('convertHTML--color', function() {
     var configNano = {
         autoprefixer: false,
         core: false,
@@ -101,23 +102,61 @@ gulp.task('inject:beforeEach', function() {
     };
     gulp.src('./_css/nakDS-core/tokens/tokens--color.css')
         .pipe(nano(configNano))
-        .pipe(inject.beforeEach('--color', '<span class="nak-box">' + '\n'))
-        .pipe(rename('tokens--color-pre.html'))
-        .pipe(gulp.dest('./_includes/tokens-view/'))
-        .pipe(notify({
-            message: 'Your TOKEN HTML is ready ♡ '
-        }));
-});
-gulp.task('inject:afterEach', function() {
-
-    gulp.src('./_includes/tokens-view/tokens--color-pre.html')
-        .pipe(inject.afterEach(';', '\n' + '</span>'))
+        .pipe(inject.beforeEach('--color', '<span class="nak-box" style="background:'))
+        .pipe(replace(/--\S+\:/g, ''))
+        .pipe(inject.afterEach(';', '"></span>'))
+        .pipe(replace(':root{', '<div class="nak-grid--wrapped">'))
+        .pipe(replace('}', '</div>'))
         .pipe(rename('tokens--color.html'))
-        .pipe(gulp.dest('./_includes/tokens-view/')) 
+        .pipe(gulp.dest('./_includes/tokens/'))
         .pipe(notify({
-            message: 'Your TOKEN HTML is ready ♡ '
+            message: 'Your COLOR TOKEN HTML is ready ♡ '
         }));
 });
+gulp.task('convertHTML--sizing', function() {
+    var configNano = {
+        autoprefixer: false,
+        core: false,
+         discardComments: { removeAll: true },
+        styleCache: false
+    };
+    gulp.src('./_css/nakDS-core/tokens/tokens--sizing.css')
+        .pipe(nano(configNano))
+        .pipe(inject.beforeEach('--', '<span class="nak-box" style="height:'))
+        .pipe(replace(/--\S+\:/g, ''))
+        .pipe(inject.afterEach(';', '"></span>'))
+        .pipe(replace(':root{', '<div class="nak-grid--wrapped">'))
+        .pipe(replace('}', '</div>'))
+        .pipe(rename('tokens--sizing.html'))
+        .pipe(gulp.dest('./_includes/tokens/'))
+        .pipe(notify({
+            message: 'Your SIZING TOKEN HTML is ready ♡ '
+        }));
+});
+gulp.task('convertHTML--font-size', function() {
+    var configNano = {
+        autoprefixer: false,
+        core: false,
+        discardComments: { removeAll: true },
+        styleCache: false
+    };
+    gulp.src('./_css/nakDS-core/tokens/tokens--font-size.css')
+        .pipe(nano(configNano))
+        .pipe(replace(':root{', '<dl>'))
+        .pipe(replace('}', '</dl>'))
+        .pipe(inject.beforeEach('--font', '<dt>'))
+        // .pipe(replace(/--\S+\:/g, ''))
+        .pipe(inject.afterEach(':', '</dt><dd style="font-size:'))
+        .pipe(inject.afterEach(';', '">She stared through the window at the stars.</dd>'))
+
+        .pipe(rename('tokens--font-size.html'))
+        .pipe(gulp.dest('./_includes/tokens/'))
+        .pipe(notify({
+            message: 'Your FONT-SIZE TOKEN HTML is ready ♡ '
+        }));
+});
+
+
 gulp.task('root-code', function() {
     var configNano = {
         autoprefixer: false,
@@ -150,13 +189,6 @@ gulp.task('variables', function() {
             message: 'Your VARIABLES CSS are ready ♡ '
         }));
 });
-// gulp.task('inject:afterEach', function(){
-//     gulp.src('_include/button.css')
-//         .pipe(inject.afterEach('/*!*/','nak'))
-//         .pipe(rename('button2.css'))
-//         .pipe(gulp.dest('_include'))
-//         .pipe(notify({ message: 'Your INSERTS are done ♡ ' }));
-// });
 gulp.task('custom', function() {
     var processors = [
         cssimport,
@@ -216,9 +248,9 @@ gulp.task('ds', function() {
 });
 // Watch
 gulp.task('watch', function() {
-    gulp.watch('./_css/nakDS-core/**/*.css', ['css', 'inject:afterEach']);
-    gulp.watch('./_css/nakDS-core/components/*.css', ['components', 'inject:afterEach']);
-    gulp.watch('./_css/nakDS-core/tokens/*.css', ['root-code']);
+    gulp.watch('./_css/nakDS-core/**/*.css', ['css']);
+    gulp.watch('./_css/nakDS-core/components/*.css', ['components']);
+    gulp.watch('./_css/nakDS-core/tokens/*.css', ['root-code','convertHTML--color','convertHTML--sizing','convertHTML--font-size']);
     gulp.watch('./_css/nakDS-custom/**/*.css', ['custom']);
     gulp.watch('./_css/ds.css', ['ds']);
     gulp.watch('./_css/extra/*.css', ['ds']);
@@ -226,4 +258,4 @@ gulp.task('watch', function() {
 });
 
 // Default
-gulp.task('default', ['css', 'custom', 'components', 'utilities', 'inject:beforeEach', 'inject:afterEach', 'root-code', 'variables', 'ds', 'watch']);
+gulp.task('default', ['css', 'custom', 'components', 'utilities','convertHTML--color','convertHTML--sizing', 'convertHTML--font-size','root-code', 'variables', 'ds', 'watch']);

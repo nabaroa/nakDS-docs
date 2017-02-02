@@ -54,6 +54,7 @@ defaults:
 types:
   - component
   - utility
+  - layout
   - object
   - global
   - theme

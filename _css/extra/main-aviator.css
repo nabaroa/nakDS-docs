@@ -378,6 +378,18 @@ h1 .endpoint {
         text-transform: uppercase;
     }
 }
+.endpoint.layout {
+    background:var(--color-neutral);
+    color:white;
+
+    .active &{
+      background:#FFB925 ;
+    }
+    &:after {
+        content: "layout";
+        text-transform: uppercase;
+    }
+}
 
 .main {
     margin: 0 0 0 210px;

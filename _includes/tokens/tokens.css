@@ -1,21 +1,11 @@
 ~~~ css
 @import "tokens--color";
+@import "tokens--sizing";
+@import "tokens--font-size";
 :root{
     --base-font:"Lato",sans-serif;
     --input-font:"MyriadPro",sans-serif;
     --code-font:"MyriadPro",sans-serif;
-    --page-width:1170px;
-    --none:0;
-    --xxx-small:0.125rem;
-    --xx-small:0.25rem;
-    --x-small:0.5rem;
-    --small:0.75rem;
-    --medium:1rem;
-    --large:1.25rem;
-    --x-large:1.5rem;
-    --xx-large:1.75rem;
-    --xxx-large:2rem;
-    --xxxx-large:3rem;
     --spacing-small:0.70rem;
     --spacing-medium:1.25rem;
     --spacing-large:2.5rem;
@@ -24,8 +14,7 @@
     --bp-medium:800px;
     --bp-large:1170px;
     --bp-page:1170px;
-
-
+  --page-width:1170px;
 }
 
 @custom-media --small-viewport (max-width:500px);

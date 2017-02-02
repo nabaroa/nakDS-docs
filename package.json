@@ -18,6 +18,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
+    "gulp-string-replace": "^0.4.0",
     "postcss-apply": "^0.4.0",
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.1",

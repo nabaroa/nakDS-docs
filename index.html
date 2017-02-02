@@ -25,11 +25,10 @@ title: nakDS
 
 				{{ doc.content | replace: "<dl>", "<h6>Parameters</h6><dl>" }}
 					{% if doc.token_path %}
-						<section class="nak-grid--wrapped">
 
 						{% capture my_include %}{% include {{ doc.token_path }}%}{% endcapture %}
 						{{ my_include }}
-						</section>
+
 					{% endif %}
 			</section>
 
