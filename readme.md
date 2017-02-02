@@ -1,5 +1,5 @@
 # nakDS
-![alt tag](https://github.com/nabaroa/nakDS/blob/master/images/logo-nakDS.png)
+![alt tag](https://github.com/nabaroa/nakDS/blob/master/docs/assets/cover.png)
 
 ###Credits:
 [Icon attribution](https://thenounproject.com/search/?q=connect&i=139022)
