@@ -1,26 +1,11 @@
 ~~~ css
-:root{
-    /*!2px;*/
-    /*!4px*/
-    /*!8px*/
-    /*!12px*/
-    /*!16px*/
-    /*!20px*/
-    /*!24px*/
-    /*!28px*/
-    /*!32px*/
-    /*!48px*/
-
-  }
-/*!---------------sizing tokens---------------*/
-/*!---------------Font size tokens---------------*/
 a{
     color:#d6d41b;
     text-decoration:underline;
     cursor:pointer;
 }
 a:hover{
-    color:#765435;
+    color:#9fcad2;
 
 }
 .nak-link--naked,.nak-link--naked:hover,.nak-link--neutral{
@@ -59,7 +44,7 @@ a:hover{
 
 }
 .nak-menu-link--color{
-    color:#765435;
+    color:#9fcad2;
 }
 .nak-menu-link--color,.nak-menu-link--color:hover{
     text-decoration:none;
@@ -70,7 +55,7 @@ a:hover{
 
 }
 .nak-menu-link--color [class*=ii-icon]{
-    color:#765435;
+    color:#9fcad2;
 
 }
 .icon-position-center{

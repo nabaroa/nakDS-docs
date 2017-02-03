@@ -179,6 +179,9 @@ h1 {
         justify-content: space-between;
         color: var(--text-color);
     }
+    .tag{
+
+    }
 }
 
 p {
@@ -314,21 +317,32 @@ dl dd:after {
     }
 }
 
-.endpoint {
+.endpoint,.tag{
     position: relative;
     display: flex;
     align-items: center;
     padding: 1px 3px;
     border-radius: 2px;
+    background:  var(--color-neutral);
+      color:white;
+      text-transform: uppercase;
     font-size: 10px;
+
+    h1 &{
+        margin-left: 10px;
+        padding: 4px 6px;
+    }
 }
 
+.tag{ 
+  background: #FFB925;
+}
 h1 .endpoint {
-    padding: 4px 6px;
+      margin-left: auto;
+
 }
 
 .endpoint.component {
-    background:  var(--color-neutral);
     color: white;
 
     .active &{
@@ -336,7 +350,6 @@ h1 .endpoint {
     }
     &:after {
         content: "Component";
-        text-transform: uppercase;
     }
 }
 
@@ -349,7 +362,6 @@ h1 .endpoint {
     }
     &:after {
         content: "Token";
-        text-transform: uppercase;
     }
 }
 
@@ -362,7 +374,6 @@ h1 .endpoint {
     }
     &:after {
         content: "Utility";
-        text-transform: uppercase;
     }
 }
 
@@ -375,7 +386,6 @@ h1 .endpoint {
     }
     &:after {
         content: "global";
-        text-transform: uppercase;
     }
 }
 .endpoint.layout {
@@ -387,7 +397,6 @@ h1 .endpoint {
     }
     &:after {
         content: "layout";
-        text-transform: uppercase;
     }
 }
 

@@ -1,23 +1,13 @@
 ~~~ css
-/*! ---------------button---------------*/
-
-:root{/*!2px;*//*!4px*//*!8px*//*!12px*//*!16px*//*!20px*//*!24px*//*!28px*//*!32px*//*!48px*/
-
-  }
-
-/*!---------------sizing tokens---------------*/
-
-/*!---------------Font size tokens---------------*/
-
 .nak-button{
     display:flex;
     align-items:center;
     justify-content:center;
     min-width:100px;
     height:2.5rem;
-    border:1px solid #765435;
+    border:1px solid #9fcad2;
     border-radius:.5rem;
-    background:#765435;
+    background:#9fcad2;
     color:#6f6f6f;
     text-decoration:none !important;
     font-size:1.25rem;
@@ -35,7 +25,7 @@
 }
 
 .nak-button:focus{
-    background:#765435;
+    background:#9fcad2;
     color:#fff;
 
 }
@@ -46,16 +36,17 @@
     justify-content:center;
     min-width:100px;
     height:2.5rem;
-    border:1px solid #765435;
+    border:1px solid #9fcad2;
     border-radius:.5rem;
-    background:#765435;
+    background:#9fcad2;
+    color:#6f6f6f;
     text-decoration:none !important;
     font-size:1.25rem;
     font-family:Lato,sans-serif;
     cursor:pointer;
-
+    border:1px solid #d6d6d6;
+    border-color:#d6d6d6;
     background:#e5e5e5;
-    color:#6f6f6f;
 }
 
 @media (max-width:500px){
@@ -68,10 +59,113 @@
 }
 
 .nak-button--neutral:focus{
-    background:#765435;
+    background:#9fcad2;
     color:#fff;
 
 }
 
-/*!*/
+.nak-button--negative{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:100px;
+  height:2.5rem;
+  border:1px solid #9fcad2;
+  border-radius:.5rem;
+  background:#9fcad2;
+  color:#6f6f6f;
+  text-decoration:none !important;
+  font-size:1.25rem;
+  font-family:Lato,sans-serif;
+  cursor:pointer;
+  border:1px solid #222;
+  border-color:#222;
+  background:#111;
+}
+
+@media (max-width:500px){
+
+    .nak-button--negative{
+        width:100%;
+
+    }
+
+}
+
+.nak-button--negative:focus{
+    background:#9fcad2;
+    color:#fff;
+
+}
+
+.nak-button--big{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:100px;
+  height:2.5rem;
+  border:1px solid #9fcad2;
+  border-radius:.5rem;
+  background:#9fcad2;
+  color:#6f6f6f;
+  text-decoration:none !important;
+  font-size:1.25rem;
+  font-family:Lato,sans-serif;
+  cursor:pointer;
+  padding:1rem;
+  height:inherit;
+}
+
+@media (max-width:500px){
+
+    .nak-button--big{
+        width:100%;
+
+    }
+
+}
+
+.nak-button--big:focus{
+    background:#9fcad2;
+    color:#fff;
+
+}
+
+.nak-button--icon-left{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:100px;
+  height:2.5rem;
+  border:1px solid #9fcad2;
+  border-radius:.5rem;
+  background:#9fcad2;
+  color:#6f6f6f;
+  text-decoration:none !important;
+  font-size:1.25rem;
+  font-family:Lato,sans-serif;
+  cursor:pointer;
+}
+
+@media (max-width:500px){
+
+    .nak-button--icon-left{
+        width:100%;
+
+    }
+
+}
+
+.nak-button--icon-left:focus{
+    background:#9fcad2;
+    color:#fff;
+
+}
+
+.nak-button--icon-left img{
+    margin-right:10px;
+    width:30px;
+    color:red;
+
+}
 ~~~

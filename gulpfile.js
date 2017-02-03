@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     inject = require('gulp-inject-string'),
     replace = require('gulp-string-replace'),
     insert = require('gulp-insert');
-
+// Core
 gulp.task('css', function() {
     var processors = [
         cssimport,
@@ -56,6 +56,9 @@ gulp.task('components', function() {
     var configNano = {
         autoprefixer: false,
         core: false,
+        discardComments: {
+            removeAll: true
+        },
         styleCache: false
     };
     return gulp.src('./_css/nakDS-core/components/*.css')
@@ -122,11 +125,13 @@ gulp.task('convertHTML--sizing', function() {
     };
     gulp.src('./_css/nakDS-core/tokens/tokens--sizing.css')
         .pipe(nano(configNano))
-        .pipe(inject.beforeEach('--', '<span class="nak-box" style="height:'))
-        .pipe(replace(/--\S+\:/g, ''))
-        .pipe(inject.afterEach(';', '"></span>'))
-        .pipe(replace(':root{', '<div class="nak-grid--wrapped">'))
+
+        .pipe(inject.beforeEach('--', '<span>'))
+        .pipe(replace(':root{', '<div class="nak-grid--wrapped nak-has-col--2 nak-grid--has-v-space>" '))
         .pipe(replace('}', '</div>'))
+        // .pipe(replace(/--\S+\:/g, ''))
+        .pipe(inject.afterEach(':', '</span><span class="nak-box" style="height:'))
+        .pipe(inject.afterEach(';', '"></span>'))
         .pipe(rename('tokens--sizing.html'))
         .pipe(gulp.dest('./_includes/tokens/'))
         .pipe(notify({
@@ -189,6 +194,7 @@ gulp.task('variables', function() {
             message: 'Your VARIABLES CSS are ready ♡ '
         }));
 });
+// Custom
 gulp.task('custom', function() {
     var processors = [
         cssimport,
@@ -217,6 +223,35 @@ gulp.task('custom', function() {
             message: 'Your CUSTOM CSS is ready ♡ '
         }));
 });
+gulp.task('components-custom', function() {
+    var processors = [
+        cssimport,
+        customproperties,
+        apply,
+        mixins,
+        nested,
+        customMedia
+    ];
+    var configNano = {
+        autoprefixer: false,
+        core: false,
+        discardComments: {
+            removeAll: true
+        },
+        styleCache: false
+    };
+    return gulp.src('./_css/nakDS-custom/components/*.css')
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('./dest/includes/custom/components/'))
+        .pipe(nano(configNano))
+        .pipe(insert.prepend('~~~ css' + '\n'))
+        .pipe(insert.append('~~~'))
+        .pipe(gulp.dest('./_includes/custom/components/'))
+        .pipe(notify({
+            message: 'Your CUSTOM COMPONENTS CSS is ready ♡ '
+        }));
+});
+// nakDS
 gulp.task('ds', function() {
     var processors = [
         cssimport,
@@ -249,13 +284,13 @@ gulp.task('ds', function() {
 // Watch
 gulp.task('watch', function() {
     gulp.watch('./_css/nakDS-core/**/*.css', ['css']);
-    gulp.watch('./_css/nakDS-core/components/*.css', ['components']);
-    gulp.watch('./_css/nakDS-core/tokens/*.css', ['root-code','convertHTML--color','convertHTML--sizing','convertHTML--font-size']);
-    gulp.watch('./_css/nakDS-custom/**/*.css', ['custom']);
+    gulp.watch('./_css/nakDS-core/components/*.css', ['components','components-custom']);
+    gulp.watch('./_css/nakDS-core/tokens/*.css', ['root-code','convertHTML--color','convertHTML--sizing','convertHTML--font-size','components-custom']);
+    gulp.watch('./_css/nakDS-custom/**/*.css', ['custom','components-custom']);
     gulp.watch('./_css/ds.css', ['ds']);
     gulp.watch('./_css/extra/*.css', ['ds']);
 
 });
 
 // Default
-gulp.task('default', ['css', 'custom', 'components', 'utilities','convertHTML--color','convertHTML--sizing', 'convertHTML--font-size','root-code', 'variables', 'ds', 'watch']);
+gulp.task('default', ['css', 'custom', 'components', 'utilities','convertHTML--color','convertHTML--sizing', 'convertHTML--font-size','root-code', 'variables','components-custom', 'ds', 'watch']);

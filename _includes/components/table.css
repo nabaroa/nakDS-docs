@@ -1,26 +1,11 @@
 ~~~ css
-:root{
-    /*!2px;*/
-    /*!4px*/
-    /*!8px*/
-    /*!12px*/
-    /*!16px*/
-    /*!20px*/
-    /*!24px*/
-    /*!28px*/
-    /*!32px*/
-    /*!48px*/
-
-  }
-/*!---------------sizing tokens---------------*/
-/*!---------------Font size tokens---------------*/
 .nak-table--neutral{
     width:100%;
     border:1px solid #ebebeb;
     background:#f5f5f5;
 }
 .nak-table--neutral th{
-    color:#765435;
+    color:#9fcad2;
     font-weight:700;
 
 }

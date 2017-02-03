@@ -1,19 +1,4 @@
 ~~~ css
-:root{
-    /*!2px;*/
-    /*!4px*/
-    /*!8px*/
-    /*!12px*/
-    /*!16px*/
-    /*!20px*/
-    /*!24px*/
-    /*!28px*/
-    /*!32px*/
-    /*!48px*/
-
-  }
-/*!---------------sizing tokens---------------*/
-/*!---------------Font size tokens---------------*/
 .nak-module--neutral{
     padding:1.25rem;
 
@@ -27,7 +12,7 @@
     flex:1;
 }
 .nak-module__title{
-    color:#765435;
+    color:#9fcad2;
     text-transform:inherit;
     font-weight:700;
 }

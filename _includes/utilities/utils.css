@@ -4,12 +4,13 @@
     /*!4px*/
     /*!8px*/
     /*!12px*/
-    /*!16px*/
+    /*!240px*/
     /*!20px*/
     /*!24px*/
     /*!28px*/
     /*!32px*/
     /*!48px*/
+    /*!16px*/
 
   }
 /*!---------------sizing tokens---------------*/
@@ -62,7 +63,7 @@ a.link-print{
     float:left;
 }
 .nak-text-color{
-    color:#765435;
+    color:#5c91c0;
 }
 .nak-text-color--secondary{
     color:#ff1821;
@@ -152,7 +153,7 @@ a.link-print{
     position:absolute;
     right:10px;
     bottom:15px;
-    color:#765435;
+    color:#5c91c0;
     content:"\e904";
 
 }

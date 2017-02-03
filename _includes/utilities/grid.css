@@ -4,12 +4,13 @@
     /*!4px*/
     /*!8px*/
     /*!12px*/
-    /*!16px*/
+    /*!240px*/
     /*!20px*/
     /*!24px*/
     /*!28px*/
     /*!32px*/
     /*!48px*/
+    /*!16px*/
 
   }
 /*!---------------sizing tokens---------------*/
@@ -56,6 +57,15 @@
 }
 .nak-grid--has-spaces .nak-col:last-child .nak-box{
     margin-right:0;
+
+}
+.nak-grid--has-v-space>*{
+    margin-top:.5rem;
+    margin-bottom:.5rem;
+
+}
+.nak-has-col--2>*{
+    width:50%;
 
 }
 .nak-grid__item{

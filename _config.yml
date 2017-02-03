@@ -16,7 +16,7 @@ collections:
     position: 2
   custom:
     title: Custom
-    position: 5
+    position: 1.5
   utilities:
     title: Utilities
     position: 3

@@ -1,19 +1,4 @@
 ~~~ css
-:root{
-    /*!2px;*/
-    /*!4px*/
-    /*!8px*/
-    /*!12px*/
-    /*!16px*/
-    /*!20px*/
-    /*!24px*/
-    /*!28px*/
-    /*!32px*/
-    /*!48px*/
-
-  }
-/*!---------------sizing tokens---------------*/
-/*!---------------Font size tokens---------------*/
 .nak-navigation-list--vertical{
     padding:1rem;
     border:10px solid #f5f5f5;
@@ -36,16 +21,16 @@
 
 }
 .nak-navigation-list--vertical li a:hover{
-    color:#765435;
+    color:#9fcad2;
 
 }
 .nak-navigation-list--vertical li span:before{
-    color:#765435;
+    color:#9fcad2;
     content:"\e902";
 
 }
 .nak-navigation-list--vertical strong{
-    color:#765435;
+    color:#9fcad2;
 
 }
 ~~~

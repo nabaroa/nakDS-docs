@@ -1,0 +1,5 @@
+~~~ css
+.ii-modal .ii-button{
+    @apply nak-button;
+}
+~~~

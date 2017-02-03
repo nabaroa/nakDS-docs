@@ -1,19 +1,4 @@
 ~~~ css
-:root{
-    /*!2px;*/
-    /*!4px*/
-    /*!8px*/
-    /*!12px*/
-    /*!16px*/
-    /*!20px*/
-    /*!24px*/
-    /*!28px*/
-    /*!32px*/
-    /*!48px*/
-
-  }
-/*!---------------sizing tokens---------------*/
-/*!---------------Font size tokens---------------*/
 .nak-wizard a{
     color:#b0b0b0;
     text-decoration:none
@@ -48,7 +33,7 @@
 
 }
 .is-active .nak-wizard-marker,.nak-is-active .nak-wizard-marker{
-    background:#765435;
+    background:#9fcad2;
 
 }
 .nak-wizard-label{

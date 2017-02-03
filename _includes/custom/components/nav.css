@@ -1,0 +1,36 @@
+~~~ css
+.nak-navigation-list--vertical{
+    padding:var(--medium);
+    border:10px solid var(--bare);
+}
+
+.nak-navigation-list--vertical h2{
+    margin:0;
+    padding-bottom:10px;
+    border-bottom:5px solid var(--bare);
+}
+
+.nak-navigation-list--vertical li{
+    display:flex;
+    align-items:center;
+    margin-bottom:5px;
+}
+
+.nak-navigation-list--vertical li a{
+    color:var(--text-color);
+    text-decoration:none;
+}
+
+.nak-navigation-list--vertical li a:hover{
+    color:var(--color);
+}
+
+.nak-navigation-list--vertical li span:before{
+    color:var(--color);
+    content:"\e902";
+}
+
+.nak-navigation-list--vertical strong{
+    color:var(--color);
+}
+~~~

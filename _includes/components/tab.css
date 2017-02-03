@@ -1,19 +1,4 @@
 ~~~ css
-:root{
-    /*!2px;*/
-    /*!4px*/
-    /*!8px*/
-    /*!12px*/
-    /*!16px*/
-    /*!20px*/
-    /*!24px*/
-    /*!28px*/
-    /*!32px*/
-    /*!48px*/
-
-  }
-/*!---------------sizing tokens---------------*/
-/*!---------------Font size tokens---------------*/
 .nak-tab-list{
     display:flex;
 }
@@ -33,7 +18,7 @@
 }
 .nak-is-active .nak-tab-link,.nak-tab-link:hover{
     background:#ebebeb;
-    box-shadow:0 -3px 0 #765435;
+    box-shadow:0 -3px 0 #9fcad2;
     color:#6f6f6f;
     text-decoration:none;
 

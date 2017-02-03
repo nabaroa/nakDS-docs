@@ -13,6 +13,9 @@ title: nakDS
 						{% if doc.type %}
 							<span class="endpoint {{ doc.type }}"></span>
 						{% endif %}
+						{% if doc.tag %}
+							<span class="tag">{{doc.tag}}</span>
+						{% endif %}
 					</a>
 				</h1>
 				{% if doc.css_path %}
@@ -34,12 +37,17 @@ title: nakDS
 
 			{% if doc.right_content %}
 			<section class="right-code">
+
 				{{doc.right_content}}
 			</section>
 			{% endif %}
 
 			{% if doc.right_code %}
 				<section class="right-code">
+					<div class="nak-l-list--horizontal">
+						<button class="nak-button--negative">Input</button>
+						<button class="nak-button--negative">Output</button>
+					</div>
 				{% capture my_include %}{% include {{ doc.css_path }}%}{% endcapture %}
 				{{ my_include | markdownify | hilightify}}
 				</section>
@@ -49,6 +57,3 @@ title: nakDS
 		</section>
 	{% endfor %}
 {% endfor %}
-
-
-<div class="nak-grid"><div class="box">blue</div></div>

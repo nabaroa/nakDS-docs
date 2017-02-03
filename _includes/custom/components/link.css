@@ -1,0 +1,76 @@
+~~~ css
+a{
+    color:var(--link-color);
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+a:hover{
+    color:var(--color-theme);
+}
+
+.nak-link--naked,.nak-link--naked:hover,.nak-link--neutral{
+    text-decoration:none;
+}
+
+.nak-link--neutral{
+    color:var(--text-color);
+}
+
+.nak-link--neutral span{
+    color:currentColor;
+}
+
+.nak-link--neutral:hover{
+    text-decoration:none;
+}
+
+.nak-link--negative{
+    color:var(--color-link--negativo);
+}
+
+.nak-link--negative:hover{
+    color:var(--color-link--negativo-hover);
+}
+
+.nak-has-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.nak-has-icon [class*=ii-icon]{
+    margin-right:5px;
+    color:var(--dark);
+}
+
+.nak-has-icon:hover [class*=ii-icon]{
+    color:var(--opaque);
+}
+
+.nak-menu-link--color{
+    color:var(--color-theme);
+}
+
+.nak-menu-link--color,.nak-menu-link--color:hover{
+    text-decoration:none;
+}
+
+.nak-menu-link--color:hover [class*=ii-icon]{
+    color:var(--third-color);
+}
+
+.nak-menu-link--color [class*=ii-icon]{
+    color:var(--color-theme);
+}
+
+.icon-position-center{
+    display:flex;
+    align-items:center;
+}
+
+.icon-position-center span{
+    margin-left:var(--medium);
+    text-decoration:none;
+}
+~~~
