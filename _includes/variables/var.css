@@ -1,8 +1,8 @@
 ~~~ css
 :root{
-    --base-font:"Lato",sans-serif;
-    --input-font:"MyriadPro",sans-serif;
-    --code-font:"MyriadPro",sans-serif;
+    --base-font:'Lato',sans-serif;
+    --input-font:'MyriadPro',sans-serif;
+    --code-font:'MyriadPro',sans-serif;
     --text-color:var(--color-opaque);
     --text-color--ok:var(--color-positive);
     --text-color--ko:var(--color-error);

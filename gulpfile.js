@@ -35,13 +35,13 @@ gulp.task('css', function() {
         },
         safe: true
     };
-    return gulp.src('./_css/nakDS-core/*.css')
+    return gulp.src('./_src/nakDS-core/*.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./dest'))
         .pipe(nano(configNano))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./dist/'))
         .pipe(notify({
-            message: 'Your CORE CSS is ready ♡'
+            message: 'Your nakDS-core CSS is ready ♡'
         }));
 });
 gulp.task('components', function() {
@@ -61,7 +61,7 @@ gulp.task('components', function() {
         },
         styleCache: false
     };
-    return gulp.src('./_css/nakDS-core/components/*.css')
+    return gulp.src('./_src/nakDS-core/components/*.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./dest/includes/components/'))
         .pipe(nano(configNano))
@@ -86,7 +86,7 @@ gulp.task('utilities', function() {
         core: false,
         styleCache: false
     };
-    return gulp.src('./_css/nakDS-core/utilities/*.css')
+    return gulp.src('./_src/nakDS-core/utilities/*.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./dest/includes/utilities/'))
         .pipe(nano(configNano))
@@ -103,7 +103,7 @@ gulp.task('convertHTML--color', function() {
         core: false,
         styleCache: false
     };
-    gulp.src('./_css/nakDS-core/tokens/tokens--color.css')
+    gulp.src('./_src/nakDS-core/tokens/tokens--color.css')
         .pipe(nano(configNano))
         .pipe(inject.beforeEach('--color', '<span class="nak-box" style="background:'))
         .pipe(replace(/--\S+\:/g, ''))
@@ -123,7 +123,7 @@ gulp.task('convertHTML--sizing', function() {
          discardComments: { removeAll: true },
         styleCache: false
     };
-    gulp.src('./_css/nakDS-core/tokens/tokens--sizing.css')
+    gulp.src('./_src/nakDS-core/tokens/tokens--sizing.css')
         .pipe(nano(configNano))
 
         .pipe(inject.beforeEach('--', '<span>'))
@@ -145,7 +145,7 @@ gulp.task('convertHTML--font-size', function() {
         discardComments: { removeAll: true },
         styleCache: false
     };
-    gulp.src('./_css/nakDS-core/tokens/tokens--font-size.css')
+    gulp.src('./_src/nakDS-core/tokens/tokens--font-size.css')
         .pipe(nano(configNano))
         .pipe(replace(':root{', '<dl>'))
         .pipe(replace('}', '</dl>'))
@@ -168,7 +168,7 @@ gulp.task('root-code', function() {
         core: false,
         styleCache: false
     };
-    return gulp.src('./_css/nakDS-core/tokens/*.css')
+    return gulp.src('./_src/nakDS-core/tokens/*.css')
         .pipe(gulp.dest('./dest/includes/tokens/'))
         .pipe(nano(configNano))
         .pipe(insert.prepend('~~~ css' + '\n'))
@@ -184,7 +184,7 @@ gulp.task('variables', function() {
         core: false,
         styleCache: false
     };
-    return gulp.src('./_css/nakDS-core/variables/*.css')
+    return gulp.src('./_src/nakDS-core/variables/*.css')
         .pipe(gulp.dest('./dest/includes/variables/'))
         .pipe(nano(configNano))
         .pipe(insert.prepend('~~~ css' + '\n'))
@@ -214,7 +214,7 @@ gulp.task('custom', function() {
         },
         safe: true
     };
-    return gulp.src('./_css/nakDS-custom/*.css')
+    return gulp.src('./_src/nakDS-custom/*.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./dest'))
         .pipe(nano(configNano))
@@ -240,7 +240,7 @@ gulp.task('components-custom', function() {
         },
         styleCache: false
     };
-    return gulp.src('./_css/nakDS-custom/components/*.css')
+    return gulp.src('./_src/nakDS-custom/components/*.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./dest/includes/custom/components/'))
         .pipe(nano(configNano))
@@ -272,7 +272,7 @@ gulp.task('ds', function() {
         },
         safe: true
     };
-    return gulp.src('./_css/ds.css')
+    return gulp.src('./_src/ds.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./dest'))
         .pipe(nano(configNano))
@@ -283,12 +283,12 @@ gulp.task('ds', function() {
 });
 // Watch
 gulp.task('watch', function() {
-    gulp.watch('./_css/nakDS-core/**/*.css', ['css']);
-    gulp.watch('./_css/nakDS-core/components/*.css', ['components','components-custom']);
-    gulp.watch('./_css/nakDS-core/tokens/*.css', ['root-code','convertHTML--color','convertHTML--sizing','convertHTML--font-size','components-custom']);
-    gulp.watch('./_css/nakDS-custom/**/*.css', ['custom','components-custom']);
-    gulp.watch('./_css/ds.css', ['ds']);
-    gulp.watch('./_css/extra/*.css', ['ds']);
+    gulp.watch('./_src/nakDS-core/**/*.css', ['css']);
+    gulp.watch('./_src/nakDS-core/components/*.css', ['components','components-custom']);
+    gulp.watch('./_src/nakDS-core/tokens/*.css', ['root-code','convertHTML--color','convertHTML--sizing','convertHTML--font-size','components-custom']);
+    gulp.watch('./_src/nakDS-custom/**/*.css', ['custom','components-custom']);
+    gulp.watch('./_src/ds.css', ['ds']);
+    gulp.watch('./_src/extra/*.css', ['ds']);
 
 });
 

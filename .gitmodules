@@ -1,6 +1,0 @@
-[submodule "_css/nakDS-custom"]
-	path = _css/nakDS-custom
-	url = https://github.com/nabaroa/nakDS-custom.git
-[submodule "_css/nakDS-core"]
-	path = _css/nakDS-core
-	url = https://github.com/nabaroa/nakDS-core.git
