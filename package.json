@@ -1,5 +1,5 @@
 {
-  "name": "erase-una-vez-el-design-system",
+  "name": "nakDS",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,11 @@
     "postcss-import": "^8.1.0",
     "postcss-media-variables": "^2.0.0",
     "postcss-mixins": "^4.0.1",
-    "postcss-nested": "^1.0.0"
+    "postcss-nested": "^1.0.0",
+    "stylelint": "^9.2.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1"
   },
   "repository": {
     "type": "git",
